@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remotes -->
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="gitlab" fetch="https://gitlab.com/" />
+  <!-- GitHub (EverestOS) -->
+  <remote  name="everest"
+           fetch="https://github.com/ProjectEverest-aosp"
+           revision="15" />
+
+  <!-- GitHub (EverestOS) -->
+  <remote  name="everest-aosp"
+           fetch="https://github.com/EverestOS-AOSP"
+           revision="15" />
+
+  <!-- Gitlab (EverestOS) -->
+  <remote  name="everest-gitlab"
+           fetch="https://gitlab.com/everestos/"
+           revision="qpr3" />
+  <!-- Gitea (EverestOS) -->
+  <remote  name="everest-gitea"
+           fetch="https://gitea.com/ProjectEverest/"
+           revision="qpr3" />
+  <!-- Removed repos -->
+  <include name="snippets/remove.xml" />
+  <!-- Track EverestOS repos -->
+  <include name="snippets/everest.xml" />
+  <!-- Track LineageOS repos -->
+  <include name="snippets/lineage.xml" />
+</manifest>

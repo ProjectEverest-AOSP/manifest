@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- General Repos -->
+  <project path="art" name="art" remote="everest" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="everest-aosp" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="everest-aosp" />
+  <project path="manifest" name="manifest" remote="everest" />
+  <project path="bionic" name="bionic" remote="everest-aosp" />
+
+  <!-- Build Repos -->
+  <project path="build/make" name="build_make" groups="pdk" remote="everest" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="everest" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device Repos -->
+  <project path="device/everest/sepolicy" name="device_everest_sepolicy" remote="everest-aosp" />
+
+  <!-- External Repos -->
+  <project path="external/dtc" name="external_dtc" remote="everest-aosp" />
+  <project path="external/libnl" name="external_libnl" remote="everest-aosp" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="everest-aosp" />
+  <project path="external/mksh" name="external_mksh" remote="everest-aosp" />
+  <project path="external/libcxx" name="external_libcxx" groups="pdk" remote="everest-aosp" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="everest-aosp" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="everest-aosp" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="everest-aosp" />
+  <project path="external/zstd" name="external_zstd" groups="pdk" remote="everest" />
+
+  <!-- Frameworks Repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="everest-aosp" />
+  <project path="frameworks/base" name="frameworks_base" remote="everest-aosp" />
+  <project path="frameworks/native" name="frameworks_native" remote="everest-aosp" />
+
+  <!-- Hardware Repos -->
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="everest-aosp" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="everest-aosp" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="everest-aosp" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="everest-aosp" />
+  <project path="hardware/ril" name="hardware_ril" remote="everest-aosp" />
+  <project path="hardware/everest-aosp/interfaces" name="hardware_everest_interfaces" remote="everest-aosp" />
+
+  <!-- CAF Repos -->
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="everest" >
+
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" groups="qcom,kailua-vendor" remote="everest-aosp" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="everest" />
+
+  <!-- Packages Repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="everest-aosp" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="everest-aosp" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="everest-aosp" />
+  
+  <!-- Vendor Repos -->
+  <project path="vendor/everest" name="vendor_everest" remote="everest-aosp" />
+  <project path="vendor/gms" name="zaidkhan0997/vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
+  <project path="vendor/support" name="vendor_support" remote="everest-aosp" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,kailua-vendor" remote="everest" />
+ 
+ <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="everest-aosp" />
+  <project path="system/bpf" name="system_bpf" remote="everest-aosp" />
+  <project path="system/libhidl" name="system_libhidl" remote="everest-aosp" />
+  <project path="system/security" name="system_security" remote="everest-aosp" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="everest" />
+  <project path="system/update_engine" name="system_update_engine" remote="everest-aosp" />
+  <project path="system/vold" name="system_vold" remote="everest-aosp" />
+  <project path="system/libziparchive" name="system_libziparchive" remote="everest-aosp" />
+  <project path="system/extras" name="system_extras" remote="everest-aosp" />
+</manifest>
