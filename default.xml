@@ -2,11 +2,12 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-15.0.0_r1"
            remote="aosp"
-           sync-j="4" />
+           sync-j="4"
+           sync-c="true" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-15.0.0_r1"/>
   <contactinfo bugurl="go/repo-bug" />
@@ -1467,6 +1468,10 @@
   <project path="trusty/vendor/google/aosp" name="trusty/vendor/google/aosp" groups="trusty" >
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
+
+  <!-- EverestOS -->
+  <include name="snippets/default.xml" />
+
   <!-- END open-source projects -->
 
 </manifest>
