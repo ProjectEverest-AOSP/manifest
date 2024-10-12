@@ -46,6 +46,7 @@
   <!-- Hardware Repos -->
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="everest" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="everest" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="everest" />
   <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="everest" />
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="everest" />
   <project path="hardware/ril" name="hardware_ril" remote="everest" />
@@ -86,6 +87,8 @@
 
   <!-- Packages Repos -->
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="everest" />
+  <project path="packages/apps/BaseCamp" name="packages_apps_BaseCamp" remote="everest" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="everest" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="everest" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="everest" />
  
@@ -102,5 +105,6 @@
   <!-- Vendor Repos -->
   <project path="vendor/everest" name="vendor_everest" remote="everest" />
   <project path="vendor/gms" name="zaidkhan0997/vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
+  <project path="vendor/support" name="vendor_support" remote="everest" />
 
 </manifest>
