@@ -85,7 +85,7 @@
   </project>
 
   <!-- Packages Repos -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="everest" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="everest" revision="test" />
   <project path="packages/apps/BaseCamp" name="packages_apps_BaseCamp" remote="everest" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="everest" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="everest" />
