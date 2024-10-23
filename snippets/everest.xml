@@ -48,7 +48,6 @@
   <!-- Hardware Repos -->
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="everest" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="everest" />
-  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="everest" />
   <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="everest" />
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="everest" />
   <project path="hardware/ril" name="hardware_ril" remote="everest" />
