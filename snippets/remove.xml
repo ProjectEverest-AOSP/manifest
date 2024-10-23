@@ -90,6 +90,9 @@
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/bootable/deprecated-ota" />
   <remove-project name="platform/build/soong" />
+  <remove-project name="platform/development" />
+  <remove-project name="platform/build/blueprint" />
+
   <!-- Frameworks Repos -->
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />

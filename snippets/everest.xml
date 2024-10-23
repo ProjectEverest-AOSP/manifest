@@ -7,8 +7,10 @@
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="everest" />
   <project path="manifest" name="manifest" remote="everest" />
   <project path="bionic" name="bionic" remote="everest" />
+  <project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs" remote="everest" />
 
   <!-- Build Repos -->
+  <project path="build/blueprint" name="build_blueprint" groups="pdk,tradefed" remote="everest"/>
   <project path="build/make" name="build_make" groups="pdk" remote="everest" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
