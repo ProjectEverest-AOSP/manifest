@@ -106,5 +106,6 @@
   <project path="vendor/everest" name="vendor_everest" remote="everest" />
   <project path="vendor/gms" name="zaidkhan0997/vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
   <project path="vendor/support" name="vendor_support" remote="everest" />
+  <project path="vendor/qcom/opensource/commonsys/fm" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="everest" />
 
 </manifest>
